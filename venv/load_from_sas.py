@@ -29,7 +29,7 @@ if __name__ == '__main__':
 ##############################################################
 def conf_read_parameters(node_name, type_data='one'):
     node_list = {}
-    conf_data = open(pathname+"\conf.json")
+    conf_data = open(pathname+"\conf.json") #here
     data = json.load(conf_data)
     conf_data.close()
 
