@@ -22,7 +22,11 @@ def main(args):
 
 
 if __name__ == '__main__':
-    para = str(sys.argv[1])
+    try:
+        para = str(sys.argv[1])
+    except Exception:
+        print('ERROR: There is not input, default Value will be used')
+        para = 'skat_passport'
     main(para)
 
 
@@ -219,4 +223,4 @@ for roadID in roadsID:
         finally:
             producer.close()
 
-save_to_file(sessionLogFile, 'end session - ' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+save_to_file(sessionLogFile, 'end session - ' + datetime.now().strftime('%Y-%m-%dT%H:%M:%S'))
